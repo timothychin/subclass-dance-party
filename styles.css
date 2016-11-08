@@ -1,27 +1,96 @@
-body, html{
-  height:100%;
+/* * * * * * * * * * * 
+ *                   *
+ *     General       *
+ *                   *
+ * * * * * * * * * * */
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-image: url("css/prom_dancefloor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 0;
 }
-body{
+body {
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  position: relative;
 }
-body, a:link, a:visited, a:active{
+body, a:link, a:visited, a:active {
   color: lightblue;
 }
-.title, .addDancerButton{
+
+.dancefloor {
+ /* min-height: 80%;
+  min-width: 80%;
+  height: 50%;
+  width: 50%;*/ 
+  position: absolute;
+  right: 17.5%;
+  top: 40%;
+  height: 50%;
+  width: 65%;
+}
+
+/* * * * * * * * * * * 
+ *                   *
+ *     Nav Bar       *
+ *                   *
+ * * * * * * * * * * */
+
+.title, .addDancerButton {
   padding:5px 12px;
   float:right;
 }
-.topbar{
+.topbar {
   height:32px;
   background-color: #555;
 }
-.title{
+.title {
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
+
+/* * * * * * * * * * * 
+ *                   *
+ *     Dancers       *
+ *                   *
+ * * * * * * * * * * */ 
+
+.dancer {
   position:absolute;
 }
+.spongebob {
+  background-image: url("css/spongebob.gif");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+}
+
+.donutCat {
+  background-image: url("css/donutCat.gif");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
