@@ -19,7 +19,7 @@ body {
   font-size: 18px;
   position: relative;
 }
-body, a:link, a:visited, a:active {
+body {
   color: lightblue;
 }
 
@@ -43,15 +43,33 @@ body, a:link, a:visited, a:active {
 
 .title, .addDancerButton {
   padding:5px 12px;
-  float:right;
+  float:left;
 }
 .topbar {
-  height:32px;
-  background-color: #555;
+  height:5%;
+  background-color: white;
+  font-family: avenir;
+  color: #555;
+  border-bottom: 1px solid black;
+  padding-top: 4px;
+  box-shadow: 0px 0px 25px 0px black;
 }
 .title {
-  background-color: #777;
+  border-right: 1px solid black;
+  font-family: avenir;
+  letter-spacing: 3px;
+  font-size: 25px;
+  height: 70%;
 }
+
+.addDancerButton {
+  margin-left: 15px;
+  margin-right: -20px; 
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+
 
 /* * * * * * * * * * * 
  *                   *
@@ -79,6 +97,7 @@ body, a:link, a:visited, a:active {
   height: 150px;
   width: 150px;
 }
+
 
 
 
