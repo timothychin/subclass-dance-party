@@ -1,6 +1,5 @@
 $(document).ready(function() {
   window.dancers = [];
-
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -23,10 +22,53 @@ $(document).ready(function() {
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
       $('.dancefloor').height() * Math.random(),
-      $('.dancefloor').width() * Math.random(),
-      Math.random() * 1000
+      $('.dancefloor').width() * Math.random()
+      , Math.random() * 1000
     );
     $('.dancefloor').append(dancer.$node);
+    window.dancers.push(dancer.$node);
   });
-});
 
+  $('.lineUp').on('click', function() { 
+    $('body').css({'background-image': 'url("css/prom_dancefloor.jpg")'});
+    $('.battleKanye').remove();
+    $('.battleTaylor').remove();
+
+    $('.spongebob').css({'top': '0px'});
+    $('.donutCat').css({'top': '100px'});
+    $('.kanye').css({'top': '350px'});
+    $('.taylor').css({'top': '500px'});
+  });
+  
+  $('.dancefloor').on('mouseover', '.donutCat', function() {
+    $(this).animate({
+      height: '+=75',
+      width: '+=75'
+    }, 1000);
+  });
+
+  $('.dancefloor').on('mouseleave', '.donutCat', function() {
+    $(this).animate({
+      height: '-=75',
+      width: '-=75'
+    }, 1000);
+  });
+
+  $('.danceBattle').on('click', function() {
+    $('.battleKanye').remove();
+    $('.battleTaylor').remove();
+
+    $('body').css({'background-image': 'url("./css/vma_stage.jpg")'});
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      $(window.dancers[i]).css({'top': '500px'});
+    }
+    var taylor = new makeTaylor(150, 250);
+    taylor.$node.addClass('battleTaylor');
+    var kanye = new makeKanye(150, 650);
+    kanye.$node.addClass('battleKanye');
+    $('.dancefloor').append(taylor.$node);
+    $('.dancefloor').append(kanye.$node);
+  });
+
+});

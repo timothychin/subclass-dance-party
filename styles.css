@@ -1,39 +1,37 @@
 /* * * * * * * * * * * 
  *                   *
- *     General       *
+ *      General      *
  *                   *
  * * * * * * * * * * */
 
-body, html {
+body, 
+html {
   height: 100%;
   width: 100%;
   background-image: url("css/prom_dancefloor.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  z-index: 0;
 }
 body {
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
   position: relative;
 }
-body {
-  color: lightblue;
-}
 
 .dancefloor {
- /* min-height: 80%;
-  min-width: 80%;
-  height: 50%;
-  width: 50%;*/ 
   position: absolute;
   right: 17.5%;
-  top: 40%;
-  height: 50%;
+  top: 20%;
+  height: 70%;
   width: 65%;
 }
+
+a {
+  color: black;
+}
+
+
 
 /* * * * * * * * * * * 
  *                   *
@@ -41,10 +39,18 @@ body {
  *                   *
  * * * * * * * * * * */
 
-.title, .addDancerButton {
+.title, 
+.addDancerButton, 
+.lineUp,
+.danceBattle {
   padding:5px 12px;
   float:left;
 }
+
+.title {
+  text-decoration: none;
+}
+
 .topbar {
   height:5%;
   background-color: white;
@@ -62,43 +68,81 @@ body {
   height: 70%;
 }
 
-.addDancerButton {
-  margin-left: 15px;
-  margin-right: -20px; 
+.addDancerButton,
+.lineUp,
+.danceBattle {
+  margin-left: 10px;
+  letter-spacing: 1px; 
   text-decoration: none;
   padding-top: 10px;
+}
+
+.addDancerButton #dancerRight {
+  padding-right: 25px;
+}
+
+.lineUp {
+  border-left: 1px solid black;
+  height: 60%;
+  padding-left: 25px;
+}
+
+.danceBattle {
+  border-right: 1px solid black;
+  padding-right: 25px;
 }
 
 
 
 /* * * * * * * * * * * 
  *                   *
- *     Dancers       *
+ *      Dancers      *
  *                   *
  * * * * * * * * * * */ 
 
 .dancer {
   position:absolute;
 }
-.spongebob {
-  background-image: url("css/spongebob.gif");
+
+.spongebob,
+.donutCat,
+.kanye,
+.taylor {
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
+}
+
+.spongebob {
+  background-image: url("css/spongebob.gif");
 }
 
 .donutCat {
   background-image: url("css/donutCat.gif");
-  background-position: center center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 150px;
-  width: 150px;
 }
 
+.kanye {
+  background-image: url("css/kanyeStatic.png");
+}
 
+.taylor {
+  background-image: url("css/taylorStatic.png");
+  width: 315px;
+}
+
+.battleTaylor {
+  background-image: url("./css/taylor.gif");
+  height: 350px;
+  width: 400px;
+}
+
+.battleKanye {
+  background-image: url("./css/kanye.gif");
+  height: 350px;
+  width: 350px;
+}
 
 
 
